@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Transfer Memoriser</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container grid-container">
+            <div class="title-wrapper">
+                <h1><i class="fas fa-hand-holding-usd"></i><span class="highlight">Money </span>Transfer Memoriser</h1>
+            </div>
+            <div class="container-info">
+                <!-- Info about unpaid invoices generate from JS -->
+            </div>
+            <div class="payments-EUR">
+                    <h2>Total payments in €: 0</h2>
+            </div>
+            <div class="payments-PLN">
+                    <h2>Total payments in PLN: 0</h2>g
+            </div>
+        </div>
+    </header>
+    <section class="form-section">
+        <div class="container" id="container-msg-form">
+            <form id="form-transfer">
+                <div>
+                    <label for="Transfer Recipent"> Transfer Recipent:</label>
+                    <input type="text" id="recipent" class="form-input">
+                </div>
+                <div>
+                    <label for="account number"> Account Number:</label>
+                    <input type="number" value="minimum 15 digits" id="account-number" class="form-input">
+                </div>
+                <div>
+                    <label for="Price">Price:</label>
+                    <select id="currency">
+                        <option value="€">€</option>
+                        <option value="PLN">PLN</option>
+                    </select>
+                    <input type="number" id="price" class="form-input">
+                </div>
+                <div>
+                    <label for="invoice number">Invoice Number:</label>
+                    <input type="text" id="invoice-number" class="form-input">
+                </div>
+                <div>
+                    <label for="date of transfer">Date of transfer:</label>
+                    <input type="text" placeholder="(e.g. dd/mm/yyyy)" id="transfer-date" class="form-input">
+                </div>
+                <input type="submit" value="add money transfer" id="btn-transfer">
+            </form>
+        </div>
+    </section>
+
+    <section class="transfers-section">
+        <div class="container-2">
+            <div class="transfers-nav">
+                <ul>
+                    <!-- <li class ="nav-el">Index</li> -->
+                    <li class="nav-el">Transfer Recipent</li>
+                    <li class="nav-el">Account Number</li>
+                    <li class="nav-el">Price</li>
+                    <li class="nav-el">Invoice Number</li>
+                    <li class="nav-el">Date of Transfer</li>
+                    <li class="nav-el">Transfer done?</li>
+                </ul>
+            </div>
+            <div class="transfer-list">
+                <!-- Here will be added money transfers from JS -->
+            </div>
+        </div>
+        
+    </section>
+    
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+/* Core Styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container-2 {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.fa-hand-holding-usd, .highlight {
+    color: #04BF33;
+    padding: 0.1em;
+}
+
+.fa-calendar-alt {
+    font-size: 1.2em;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+button, #btn-transfer {
+    border: 2px solid rgba(0,0,0,0.9);
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #000;
+    height: 50px;
+    min-width: 200px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+input[type="submit"], select {
+    cursor: pointer;
+}
+
+
+
+
+
+/* Header */
+
+header {
+    background-color:#1B2440;
+    color:#fff;
+    border-bottom: 5px solid #000;
+}
+
+.grid-container {
+    padding: 25px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1.02fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "app-title unpaidINV"
+        "app-title totalEUR"
+        "app-title totalPLN";
+}
+
+header .title-wrapper {
+    text-shadow: 0 0 5px #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+header .title-wrapper {
+    grid-area: app-title;
+    font-size: 1.11rem;
+}
+
+header .container-info {
+    grid-area: unpaidINV;
+
+}
+
+.payments-EUR, .payments-PLN, .container-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+    color: #FFF;
+    text-shadow: 0 0 5px #000;
+    
+}
+
+.payments-EUR {
+    grid-area: totalEUR;
+}
+
+.payments-PLN {
+    grid-area: totalPLN;
+}
+
+.payments-info div {
+    text-align: center;
+};
+
+
+
+/* message & form-section */
+
+
+.message-alert {
+    background: #fff
+}
+
+.message-success {
+    background: #01A000;
+}
+
+.message-remove {
+    background: rgb(188, 33, 33);
+    color: #fff;
+}
+
+.msg {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    padding: 1em;
+    font-weight: bold;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+    opacity: 0;
+}
+
+
+#form-transfer {
+    text-align: center;
+    padding: 50px 70px;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 1px #000;
+}
+
+#form-transfer div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#form-transfer div select {
+    position: absolute;
+    top:50%;
+    right: 55%;
+    transform:translate(0,-50%);
+    height: 85%;
+    min-width: 70px;
+    background-color: #ccc;
+    color: #1B2440;
+    border: 1px solid #000;
+    text-shadow:0 0 1px #000;
+}
+
+#form-transfer div label {
+    width: 60%;
+    text-align: left;
+}
+
+#form-transfer div input {
+    width:60%;
+    height: 30px;
+    border: 1px solid #000;
+    box-shadow:0 0 1px #000;
+    background-color: #ccc;
+}
+
+#btn-transfer {
+    margin-top: 25px;
+    background-color: #03A62C;
+    width: 350px;
+    border-radius: 5px;
+    color:#ddd;
+    transition: all 0.1s linear;
+
+}
+
+#btn-transfer:hover {
+    transform: scale(0.97);
+    color:#000;
+    background-color: #01A000;
+    box-shadow: 0 0 3px #1B2440;
+}
+
+
+
+/* transfers-section */
+
+.transfers-nav {
+    background-color: #D9AE5F;
+
+}
+
+.transfers-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #1B2440;
+    border-bottom: 2px solid #1B2440;
+    padding: 1em;
+}
+
+.transfers-nav ul .nav-el {
+    flex-basis: 14.5%;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.2em;
+    font-size: 1.1em;
+}
+
+
+/* transfers-list */ 
+    .transfer-money {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ccc;
+        border-bottom: 1px solid #1B2440;
+        transition: background-color .12s linear;
+        cursor: pointer;
+    }
+
+    .transfer-money:hover {
+        background-color: #aaa;
+    }
+
+    .transfer-money .transfer-el {
+        list-style: none;
+        flex-basis: 15%;
+        text-align: center;
+        padding: 0.8em;
+    }
+
+    .transfer-done {
+        animation: transferDone 0.3s linear forwards;
+    }
+
+    .btn-delete {
+        text-decoration: none;
+        color: #000;
+        background-color: rgb(188, 33, 33);
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        border: 1px solid #000;
+        font-weight: bold;
+        width: 30px;
+        height: 50px;;
+    }
+
+
+    /* Animations */
+
+    @keyframes transferDone {
+        0% {
+            background-color: #ccc;
+        }
+
+
+        100% {
+            background-color: #03a62c;
+        }
+    }
