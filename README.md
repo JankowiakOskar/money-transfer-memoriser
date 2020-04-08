@@ -1,7 +1,7 @@
-# Money Transfer Memoriser VANILLA JS
+# Money Transfer Memoriser
 
 Money transfer memoriser is an application that is used to save bank transfers.
-All wrote in Vanilla JS / Local Storage /  
+All wrote in Vanilla JS / Local Storage 
 Local storage was used to keep in memory transfers. 
 
 # How to use
